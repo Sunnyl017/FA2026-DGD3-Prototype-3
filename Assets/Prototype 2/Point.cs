@@ -8,7 +8,6 @@ public class Point : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        objectiveScript = GetComponent<ObjectiveScript>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -28,7 +27,7 @@ public class Point : MonoBehaviour
         if (collider.gameObject.CompareTag("Objective"))
         {
             objectiveScript.overallPoints += point;
-            point += 0;
+            point = 0;
         }
     }
 }
